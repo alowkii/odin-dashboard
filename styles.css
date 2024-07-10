@@ -166,7 +166,7 @@ body{
     justify-content: space-evenly;
 }
 
-.container > header > * > button{
+.container > header > .user-box > button{
     background-color: var(--background-light-color);
     border: none;
     padding: 0.5rem;
@@ -175,14 +175,29 @@ body{
     cursor: pointer;
     transition: 0.5s;
     height: 2.5rem;
+    align-items: center;
+    border-radius: 24px;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    padding: 2px 24px;
 }
 
 .container > header > .search-box > button{
+    background-color: var(--background-light-color);
+    border: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    height: 2.5rem;
     border-radius: 50%;
 }
 
 .container > header > .search-box > input{
-    background-color: var(--secondary-color);
+    background-color: var(--sidebar-dark-color);
     width: 80%;
     border: none;
     padding: 0.5rem 2rem;
@@ -197,11 +212,24 @@ body{
     background-color: var(--white-color);
 }
 
+.container > header > .search-box > input:not(:focus){
+    color: var(--white-color);
+}
+
 .container > header > .info-box > .user-info{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 25%;
+    width: 30%;
+}
+
+.container > header > .info-box > .user-info > .info > h3{
+    font-size: 15px;
+}
+
+.container > header > .info-box > .user-info > .info > p{
+    font-size: larger;
+    font-weight: 400;
 }
 
 .container > header > .info-box > .actions{
@@ -216,7 +244,6 @@ body{
     background-color: #fff;
     border-radius: 24px;
     border-style: none;
-    box-sizing: border-box;
     color: #3c4043;
     cursor: pointer;
     display: inline-flex;
@@ -244,16 +271,12 @@ body{
 }
 
 .container > header > .info-box button:hover {
-  background: #F6F9FE;
-  color: #174ea6;
-}
-
-.container > header > .info-box button:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
+  background: var(--background-light-color);
+  color: #000000;
 }
 
 .container > header > .info-box button:focus {
   outline: none;
-  border: 2px solid #4285f4;
+  border: 2px solid var(--sidebar-dark-color);
 }
+
